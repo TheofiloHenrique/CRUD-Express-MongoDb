@@ -1,4 +1,5 @@
 import { Router } from "express";
+import contactValidations from "./middlewares/middleware.js";
 
 import {
   createContact,
@@ -10,8 +11,8 @@ import {
 const routes = Router();
 
 /* Rotas dos contatos */
-routes.post("/createContact", createContact);
-routes.get("/listContacts", listContacts);
+routes.post("/createContact",contactValidations, createContact);
+routes.get("/listContacts",listContacts);
 routes.delete("/deleteContact/:id", deleteContact);
 routes.patch("/updateContact/:id", updateContact);
 

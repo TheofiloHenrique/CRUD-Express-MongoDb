@@ -12,7 +12,7 @@ async function createContact(req, res) {
   }
 }
 
-async function listContacts(res) {
+async function listContacts(req,res) {
   try {
     const contacts = await Contact.find();
     return res.status(200).json(contacts);
@@ -23,16 +23,14 @@ async function listContacts(res) {
 }
 
 async function deleteContact(req, res) {
-    const id = req.params.id;
+  const id = req.params.id;
 
   try {
-    if (!id)return res.status(422).json({ message: "Contato não encontrado!" });
-
     await Contact.findByIdAndDelete({ _id: id });
     return res.status(200).json({ message: "Contato deletado!" });
   } catch (error) {
     console.log("Erro ao deletar contato!", error);
-    res.status(500).json({ message: "Erro ao deletar contato!" });
+    res.status(500).json({ message: "Erro ao deletar contato! verifique se o id está correto!" });
   }
 }
 
@@ -41,13 +39,11 @@ async function updateContact(req, res) {
   const contact = req.body;
 
   try {
-    if (!id) return res.status(422).json({ message: "Contato não encontrado!" });
-
     await Contact.findByIdAndUpdate({ _id: id }, contact);
-    return res.status(200).json({ message: "User updated!" });
+    return res.status(200).json({ message: "Contato atualizado!" });
   } catch (error) {
     console.log("Erro ao atualizar contato!", error);
-    res.status(500).json({ message: "Erro ao atualizar contato!" });
+    res.status(500).json({ message: "Erro ao atualizar contato! verifique se o id está correto!" });
   }
 }
 
