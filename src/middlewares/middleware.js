@@ -6,7 +6,7 @@ async function contactValidations(req,res,next){
     if (!req.body.address) return res.status(422).json({ message: "O endereço é obrigatório!" });
     if (!req.body.email) return res.status(422).json({ message: "O email é obrigatório!" });
     
-    /*Checando se email já foi registrado */
+    /*Checando se o email já foi registrado */
     const contactExist = await Contact.findOne({ email: req.body.email });
     if (contactExist) return res.status(422).json({ message: "Este Email já está em uso!" });
     
