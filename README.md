@@ -61,7 +61,7 @@ Este é um exemplo do Schema para um contato em formato JSON:
 
 ```
 
-Os dados, após serem submetidos à rota de criação de contatos (/createContacts), passam por validações básicas antes de serem aprovados. 
+Os dados, após serem submetidos à rota de criação de contatos (/createContact), passam por validações básicas antes de serem aprovados. 
 
 ```bash
 async function contactValidations(req,res,next){
@@ -103,7 +103,7 @@ async function listContacts(req,res) {
 
 ```
 
-<p align="center"><img src=./readmeIMGS/gif4.gif width="1000"></a>
+<p align="center"><img src=./imgs/gif4.gif width="1000"></a>
   <br></p>
 
 > **Nota:**
