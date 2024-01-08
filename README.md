@@ -1,6 +1,6 @@
 <h1 align="center">
   <br>
-  <img src=./readmeIMGS/readIMG.png width="350"></a>
+  <img src=./imgs/readIMG.png width="350"></a>
   <br>
   C.R.U.D de Contatos
   <br>
@@ -20,7 +20,7 @@
 
 </p>
 
-<p align="center"><img src=./readmeIMGS/gif.gif width="1000"></a>
+<p align="center"><img src=./imgs/gif.gif width="1000"></a>
   <br></p>
 
 
@@ -116,11 +116,11 @@ async function listContacts(req,res) {
 Para iniciar o processo, é necessário que o ID do contato seja enviado como parâmetro na URL.
 
 ✍:
-<p align="center"><img src=./readmeIMGS/gif222.gif width="1000"></a>
+<p align="center"><img src=./imgs/gif222.gif width="1000"></a>
   <br></p>
 
 🗑:
-  <p align="center"><img src=./readmeIMGS/gif3.gif width="1000"></a>
+  <p align="center"><img src=./imgs/gif3.gif width="1000"></a>
   <br></p>
 
 
